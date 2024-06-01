@@ -8,8 +8,8 @@ namespace Read_Project
 {
     internal class Inimigo : Personagem
     {
-        public Inimigo(string nome, int vida, string classe) : 
-            base(nome, vida, classe) { 
+        public Inimigo(string nome, int vida, string classe, int dano) : 
+            base(nome, vida, classe, dano) { 
 
         }
 

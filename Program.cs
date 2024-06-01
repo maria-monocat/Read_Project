@@ -12,12 +12,14 @@ namespace Read_Project
         static void Main(string[] args)
         {
             Personagem jogador = new Personagem();
+            
             Quest missao = new Quest();
 
             missao.lerIntro();
 
             jogador.inputClasseJogador(jogador);
             
+            missao.lutarContraRonRon(20,jogador);
         }
 
     }

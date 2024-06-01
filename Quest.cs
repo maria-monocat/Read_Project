@@ -44,19 +44,47 @@ namespace Read_Project
 
         public string lutarContraRonRon(int vida, Personagem jogador)
         {
-            Console.Clear();
             char read;
+            string confirm;
             string relatorio;
 
+            Console.WriteLine("\nQue a luta pelo TRONO MEOW começe!(ENTER)");
+            read = Console.ReadKey().KeyChar;
+            Console.Clear();
+            
+
             Console.WriteLine("\tMEOW SUPREME");
+
+            Inimigo npcRonRon = new Inimigo("RonRon, O Gatinho Preto Assassino",100,"ASSASSINO", 80);
+            
+            Console.WriteLine();
             Console.WriteLine("nyan.nyan...(ENTER)");
+            Console.WriteLine(jogador.vida);
             read = Console.ReadKey().KeyChar;
             Console.WriteLine();
-            Console.WriteLine("NYAN!!(ENTER");
+            Console.WriteLine("NYAN!!(ENTER)");
             read = Console.ReadKey().KeyChar;
+            int jogadorAtacado = jogador.vida - npcRonRon.dano;
+            int npcAtacado = npcRonRon.vida - 0;
+
+            
             Console.WriteLine();
-            Console.WriteLine("RonRon, o Gatinho Preto Assassino apacere das sombras e CAUSA DANO EXPLOSIVO em " + jogador.nome + ".");
+            Console.WriteLine("RonRon, o Gatinho Preto Assassino apacere das sombras e CAUSA DANO EXPLOSIVO em você.(ENTER)");
             read = Console.ReadKey().KeyChar;
+
+            imprimirBatalha(jogador,npcRonRon,npcAtacado,jogadorAtacado);
+            
+            Console.WriteLine("O que você QUER fazer?");
+            if (jogador.classe.Equals("NINJA"))
+            {
+                jogador.habilidadeNinja(jogador, npcRonRon, npcAtacado, jogadorAtacado);
+
+            }else if (jogador.classe.Equals("ASSASSINO"))
+            {
+                jogador.habilidadeAssassino(jogador,npcRonRon,npcAtacado,jogadorAtacado);
+
+            }
+
 
             if (vida <= 0) {
                 relatorio = "NYAN!\nVocê VENCEU RonRon, o Gatinho Preto Assassino!";
@@ -69,5 +97,19 @@ namespace Read_Project
 
         }
 
+        public void imprimirBatalha(Personagem jogador, Inimigo npc, int npcAtacado, int jogadorAtacado)
+        {
+            Console.WriteLine("---------------------");
+            Console.WriteLine("RELATÓRIO DA BATALHA");
+            Console.WriteLine("---------------------");
+            Console.WriteLine("VOCÊ");
+            Console.WriteLine("Nome do Gato:" + jogador.nome + "\nClasse do Gato:" + jogador.classe + "\nVida Atual: " + jogadorAtacado + "/" + jogador.vida + "\nDano:" + jogador.dano);
+            Console.WriteLine("---------------------");
+            Console.WriteLine("OPONENTE");
+            Console.WriteLine("Nome do Gato:" + npc.nome + "\nClasse do Gato:" + npc.classe + "\nVida Atual: " + npcAtacado + "/" + npc.vida + "\nDano:" + npc.dano);
+            Console.WriteLine();
+        }
+
     }
+
 }

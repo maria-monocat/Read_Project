@@ -5,6 +5,24 @@
     {
       "AbsoluteMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|c:\\users\\monoc\\source\\repos\\read_project\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|c:\\users\\monoc\\source\\repos\\read_project\\inimigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|solutionrelative:inimigo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|c:\\users\\monoc\\source\\repos\\read_project\\quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|solutionrelative:quest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|c:\\users\\monoc\\source\\repos\\read_project\\personagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F93BE733-665D-4067-9A78-FB6DC2FFA09E}|Read_Project.csproj|solutionrelative:personagem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\monoc\\Downloads\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\monoc\\Downloads\\Program 1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +32,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\monoc\\Downloads\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\Program.cs",
+              "ToolTip": "C:\\Users\\monoc\\Downloads\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACMAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:37:26.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program 1.cs",
+              "DocumentMoniker": "C:\\Users\\monoc\\Downloads\\Program 1.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\Downloads\\Program 1.cs",
+              "ToolTip": "C:\\Users\\monoc\\Downloads\\Program 1.cs",
+              "RelativeToolTip": "..\\..\\..\\Downloads\\Program 1.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:37:18.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Quest.cs",
+              "DocumentMoniker": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Quest.cs",
+              "RelativeDocumentMoniker": "Quest.cs",
+              "ToolTip": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Quest.cs",
+              "RelativeToolTip": "Quest.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAADwvwwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:34:47.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Inimigo.cs",
+              "DocumentMoniker": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Inimigo.cs",
+              "RelativeDocumentMoniker": "Inimigo.cs",
+              "ToolTip": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Inimigo.cs",
+              "RelativeToolTip": "Inimigo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:25:42.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Personagem.cs",
+              "DocumentMoniker": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Personagem.cs",
+              "RelativeDocumentMoniker": "Personagem.cs",
+              "ToolTip": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Personagem.cs",
+              "RelativeToolTip": "Personagem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAiwBQAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-01T12:02:50.427Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +107,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\monoc\\source\\repos\\Read_Project\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAFAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwFgAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-01T10:45:11.804Z",
               "EditorCaption": ""

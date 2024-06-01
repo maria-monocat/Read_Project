@@ -1,0 +1,15 @@
+C:\Users\monoc\source\repos\Read_Project\bin\Debug\net8.0\Read_Project.exe
+C:\Users\monoc\source\repos\Read_Project\bin\Debug\net8.0\Read_Project.deps.json
+C:\Users\monoc\source\repos\Read_Project\bin\Debug\net8.0\Read_Project.runtimeconfig.json
+C:\Users\monoc\source\repos\Read_Project\bin\Debug\net8.0\Read_Project.dll
+C:\Users\monoc\source\repos\Read_Project\bin\Debug\net8.0\Read_Project.pdb
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.AssemblyInfoInputs.cache
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.AssemblyInfo.cs
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.csproj.CoreCompileInputs.cache
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.sourcelink.json
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.dll
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\refint\Read_Project.dll
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.pdb
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\Read_Project.genruntimeconfig.cache
+C:\Users\monoc\source\repos\Read_Project\obj\Debug\net8.0\ref\Read_Project.dll

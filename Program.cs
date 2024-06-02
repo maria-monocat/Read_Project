@@ -15,11 +15,12 @@ namespace Read_Project
             
             Quest missao = new Quest();
 
-            missao.lerIntro();
+            //missao.lerIntro();
 
             jogador.inputClasseJogador(jogador);
             
-            missao.lutarContraRonRon(jogador);
+           // missao.lutarContraRonRon(jogador);
+            missao.lutarContraNyanko(jogador);
         }
 
     }

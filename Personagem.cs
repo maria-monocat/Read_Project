@@ -60,7 +60,7 @@ namespace Read_Project
             do
             {
 
-                Console.WriteLine("\nEscolha seu ESTILO DE LUTA FELINO:\n1 - Ninja\n2 - Assassino\n3 - Intimidador");
+                Console.WriteLine("\nEscolha seu ESTILO DE LUTA FELINO:\n1 - Ninja\n2 - Assassino");
                 input = Convert.ToInt32(Console.ReadLine());
 
                 switch (input)

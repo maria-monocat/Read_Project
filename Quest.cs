@@ -9,6 +9,7 @@ namespace Read_Project
     internal class Quest
     {
         public bool missao;
+        public bool proximaFase = false;
 
         public void lerIntro()
         {
@@ -85,51 +86,42 @@ namespace Read_Project
                 {
 
 
-                    Console.WriteLine("1 - NYANJA ATAQUE > v < (Causa 3 golpes consecutivos no oponente com base no seu DANO.\n2 - LAMBER :P (CURA 160 do DANO RECEBIDO)");
+                    Console.WriteLine("\n1 - NYANJA ATAQUE > v < (Causa 3 golpes consecutivos no oponente com base no seu DANO.\n2 - LAMBER :P (CURA 160 do DANO RECEBIDO)");
                     confirm = Console.ReadLine();
                     switch (confirm)
                     {
                         case "1":
-                            Console.WriteLine("VOCÊ usou a HABILIDADE - NYANJA ATAQUE.");
+                            Console.WriteLine("\nVOCÊ usou a HABILIDADE - NYANJA ATAQUE.");
 
-                            Console.WriteLine("Aperte a tecla (ENTER) 3 vezes para aplicar 3 Golpes Consecutivos no Oponente com base no seu DANO.(ENTER)");
-                            Console.WriteLine();
+                            Console.WriteLine("Aperte a tecla (ENTER) 3 vezes para aplicar 3 Golpes Consecutivos no Oponente com base no seu DANO.");
 
                             Console.WriteLine("Nyan.(ENTER)");
                             read = Console.ReadKey().KeyChar;
                             npcAtacado = npcAtacado - jogador.dano;
                             Console.WriteLine("Vida Oponente:" + npcAtacado + "/" + npcRonRon.vida);
 
-                            Console.WriteLine();
+
                             Console.WriteLine("Nyannn.(ENTER)");
                             read = Console.ReadKey().KeyChar;
                             npcAtacado = npcAtacado - jogador.dano/2;
                             Console.WriteLine("Vida Oponente:" + npcAtacado + "/" + npcRonRon.vida);
 
-                            Console.WriteLine();
+
                             Console.WriteLine("NYANNN!.(ENTER)");
                             read = Console.ReadKey().KeyChar;
                             npcAtacado = npcAtacado - jogador.dano/10;
                             Console.WriteLine("Vida Oponente:" + npcAtacado + "/" + npcRonRon.vida);
-                            Console.WriteLine("Você ATACOU " + npcRonRon.nome+".(ENTER)");
+                            Console.WriteLine("\nVocê ATACOU " + npcRonRon.nome+".(ENTER)");
                             read = Console.ReadKey().KeyChar;
 
                             Console.WriteLine(npcRonRon.nome + " ATACA você com DANO EXPLOSIVO. NYANN!(ENTER)");
                             read = Console.ReadKey().KeyChar;
                             jogadorAtacado = jogadorAtacado - npcRonRon.dano;
-                            Console.WriteLine("Sua Vida:" + jogadorAtacado + "/" + jogador.vida);
-                            read = Console.ReadKey().KeyChar;
                             break;
                         case "2":
                             Console.WriteLine("VOCÊ usou a HABILIDADE - LAMBER :P.(ENTER)");
                             read = Console.ReadKey().KeyChar;
-                            Console.WriteLine();
                             Console.WriteLine("Aperte ENTER 2 vezes para LAMBER seu pelo e se CURAR  do golpe do oponente.");
-                            Console.WriteLine();
-
-                            Console.WriteLine("Chlep.(ENTER)");
-                            read = Console.ReadKey().KeyChar;
-                            jogadorAtacado = jogadorAtacado + 20 + npcRonRon.dano;
                             
 
                             if (jogadorAtacado > jogador.vida)
@@ -141,17 +133,37 @@ namespace Read_Project
 
                                 Console.WriteLine("Chlep.(ENTER)");
                                 read = Console.ReadKey().KeyChar;
-                                jogadorAtacado = jogadorAtacado + 20 + npcRonRon.dano / 2;
+                                jogadorAtacado = jogadorAtacado + 80;
 
 
                                 overLife = jogadorAtacado - jogador.vida;
                                 jogadorAtacado -= overLife;
+
+                                Console.WriteLine("Chlep.(ENTER)");
+                                read = Console.ReadKey().KeyChar;
+                                jogadorAtacado = jogadorAtacado + 80;
+
+
+                                overLife = jogadorAtacado - jogador.vida;
+                                jogadorAtacado -= overLife;
+
+
+                                Console.WriteLine("Você CUROU 160 de VIDA.(ENTER)");
+                                read = Console.ReadKey().KeyChar;
+
+                                Console.WriteLine(npcRonRon.nome + " ATACA você com DANO EXPLOSIVO. NYANN!(ENTER)");
+                                read = Console.ReadKey().KeyChar;
+                                jogadorAtacado = jogadorAtacado - npcRonRon.dano;
                             }
                             else
                             {
                                 Console.WriteLine("Chlep.(ENTER)");
                                 read = Console.ReadKey().KeyChar;
-                                jogadorAtacado = jogadorAtacado + 20 + npcRonRon.dano / 2;
+                                jogadorAtacado = jogadorAtacado + 80;
+
+                                Console.WriteLine("Chlep.(ENTER)");
+                                read = Console.ReadKey().KeyChar;
+                                jogadorAtacado = jogadorAtacado + 80;
 
 
                                 int overLife = jogadorAtacado - jogador.vida;
@@ -165,10 +177,8 @@ namespace Read_Project
                                 Console.WriteLine(npcRonRon.nome + " ATACA você com DANO EXPLOSIVO. NYANN!(ENTER)");
                                 read = Console.ReadKey().KeyChar;
                                 jogadorAtacado = jogadorAtacado - npcRonRon.dano;
-                                read = Console.ReadKey().KeyChar;
 
                             }
-
                             break;
 
                             
@@ -259,20 +269,23 @@ namespace Read_Project
             } while (jogadorAtacado > 0 && npcAtacado > 0);
 
 
-            if (npcAtacado <= 0)
-            {
-                Console.WriteLine("NYAN!\nVocê VENCEU RonRon, o Gatinho Preto Assassino!(ENTER)");
-                read = Console.ReadKey().KeyChar;
-                imprimirBatalha(jogador,npcRonRon,npcAtacado,jogadorAtacado);
-            }
-            else if (jogadorAtacado <= 0)
-            {
-                Console.WriteLine("MOUW...Você PERDEU para RonRon... \nAgora ele é o REI MEOW.(ENTER)");
-                read = Console.ReadKey().KeyChar;
-                imprimirBatalha(jogador, npcRonRon, npcAtacado, jogadorAtacado);
-            }
+                if (npcAtacado <= 0)
+                {
+                    Console.WriteLine("NYAN!\nVocê VENCEU RonRon, o Gatinho Preto Assassino!(ENTER)");
+                    read = Console.ReadKey().KeyChar;
+                    Console.WriteLine("Agora você irá enfrentar seu SEGUNDO IRMÃO...NYAN! (ENTER)");
+                    read = Console.ReadKey().KeyChar;
+                proximaFase = true;
+                }
+                else if (jogadorAtacado <= 0)
+                {
+                    Console.WriteLine("MOUW...Você PERDEU para RonRon... \nAgora ele é o REI MEOW.(ENTER)");
+                    read = Console.ReadKey().KeyChar;
 
+                    proximaFase = false;
 
+                }
+             
         }
 
         public void lutarContraNyanko(Personagem jogador)
@@ -316,7 +329,7 @@ namespace Read_Project
                 
                 if (jogador.classe.Equals("NINJA"))
                 {
-                    Console.WriteLine("1 - NYANJA ATAQUE > v < (Causa 3 golpes consecutivos no oponente com base no seu DANO.)\n2 - LAMBER :P (CURA com BASE no DANO RECEBIDO)");
+                    Console.WriteLine("1 - NYANJA ATAQUE > v < (Causa 3 golpes consecutivos no oponente com base no seu DANO.)\n2 - LAMBER :P (CURA 160 de VIDA.)");
                     confirm = Console.ReadLine();
                     switch (confirm)
                     {
@@ -356,45 +369,41 @@ namespace Read_Project
                             read = Console.ReadKey().KeyChar;
                             Console.WriteLine();
                             Console.WriteLine("Aperte ENTER 2 vezes para LAMBER seu pelo e se CURAR do golpe do oponente.");
-                            Console.WriteLine();
 
-                            Console.WriteLine("Chlep.(ENTER)");
-                            read = Console.ReadKey().KeyChar;
-                            jogadorAtacado = jogadorAtacado + 80;
-
-                            if (jogadorAtacado > jogador.vida)
-                            {
-                                int overLife = jogadorAtacado - jogador.vida;
-                                jogadorAtacado -= overLife;
-
-
+                                Console.WriteLine("Swwwwwwwwwwwwwwwwwwwwua viddda:" + jogadorAtacado + "/" + jogador.vida);
+                                Console.WriteLine("Chlep.(ENTER)");
+                                read = Console.ReadKey().KeyChar;
+                                jogadorAtacado = jogadorAtacado + 80;
+                                Console.WriteLine("Sua vida:" + jogadorAtacado + "/" + jogador.vida);
 
                                 Console.WriteLine("Chlep.(ENTER)");
                                 read = Console.ReadKey().KeyChar;
                                 jogadorAtacado = jogadorAtacado + 80;
-                                
-
-                                overLife = jogadorAtacado - jogador.vida;
-                                jogadorAtacado -= overLife;
-
-                            }
-                            else
-                            {
-                                Console.WriteLine("Chlep.(ENTER)");
-                                read = Console.ReadKey().KeyChar;
-                                jogadorAtacado = jogadorAtacado + 80;
+                                Console.WriteLine("Sua vida:" + jogadorAtacado + "/" + jogador.vida);
 
 
+
+
+                                Console.WriteLine("Você CUROU 160 de VIDA.(ENTER)");
+                                                              
                                 jogadorAtacado = jogadorAtacado - npcNyanko.dano;
                                 jogadorAtacado = jogadorAtacado + npcNyanko.dano++;
-                                Console.WriteLine("Você CUROU sua VIDA.(ENTER)");
+
+                                if(jogadorAtacado > 250)
+                                {
+                                    int overLife = jogadorAtacado - jogador.vida;
+                                    jogadorAtacado = jogadorAtacado - overLife;
+                                }
+                                
+                                Console.WriteLine("Sua vida:" + jogadorAtacado + "/" + jogador.vida);
                                 read = Console.ReadKey().KeyChar;
+
 
                                 Console.WriteLine(npcNyanko.nome + " ENCARA você ... OwO. Você se sente ATORDOADO.(ENTER)");
                                 read = Console.ReadKey().KeyChar;
-                                jogadorAtacado = jogadorAtacado - npcNyanko.dano++;
+                                jogadorAtacado = jogadorAtacado - npcNyanko.dano;
 
-                            }
+                            
                             break;
                             
 
@@ -511,5 +520,7 @@ namespace Read_Project
         }
 
     }
+
+    
 
 }

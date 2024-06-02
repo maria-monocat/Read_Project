@@ -70,14 +70,10 @@ namespace Read_Project
                         Console.WriteLine("Você escolheu " + jogador.classe + ".\nGato com estilo de luta "+ jogador.classe +" são rápidos,\ncausam sequência de DANO RÁPIDO com as patinhas e possuem VIDA MÉDIA");
                         criarNovaClasse();
                         break;
+
                     case 2:
                         jogador.criarPersonagemAssassino(nomeJogador);
-                        Console.WriteLine("Você escolheu " + jogador.classe + ".\nGato com estilo de luta "+ jogador.classe +" são fatais, \ncausam DANO EXPLOSIVO com seus pulos sobre o inimigo mas possuem VIDA BAIXA");
-                        criarNovaClasse();
-                        break;
-                    case 3:
-                        jogador.criarPersonagemIntimidador(nomeJogador);
-                        Console.WriteLine("Você escolheu " + jogador.classe + ".\nGato com estilo de luta "+ jogador.classe +" são opressivos, \ncausam DANO CONSTANTE com seu olhar de desprezo e possuem VIDA ALTA");
+                        Console.WriteLine("Você escolheu " + jogador.classe + ".\nGato com estilo de luta " + jogador.classe + " são fatais, \ncausam DANO EXPLOSIVO com seus pulos sobre o inimigo mas possuem VIDA BAIXA");
                         criarNovaClasse();
                         break;
                     default:
@@ -118,18 +114,6 @@ namespace Read_Project
             return jogadorAssassino;
         }
 
-        public Personagem criarPersonagemIntimidador(string nome)
-        {
-            this.nome = nome;
-            this.vida = 100;
-            this.classe = "INTIMIDADOR";
-            this.dano = 10;
-
-            Personagem jogadorIntimidador = new Personagem(nome, vida, classe, dano);
-
-            return jogadorIntimidador;
-        }
-
         public void habilidadeNinja(Personagem jogador, Inimigo npc, int npcAtacado, int jogadorAtacado)
         {
             Console.WriteLine("1 - NYANJA ATAQUE > v < (Causa 3 golpes consecutivos no oponente)\n2 - LAMBER :P (CURA 50% do DANO RECEBIDO)");
@@ -145,7 +129,7 @@ namespace Read_Project
 
                     Console.WriteLine("Nyan.(ENTER)");
                     read = Console.ReadKey().KeyChar;
-                    npcAtacado = npc.vida - jogador.dano;
+                    npcAtacado = npcAtacado - jogador.dano;
                     Console.WriteLine(npcAtacado);
 
                     Console.WriteLine();
@@ -159,8 +143,12 @@ namespace Read_Project
                     read = Console.ReadKey().KeyChar;
                     npcAtacado = npcAtacado - jogador.dano;
                     Console.WriteLine(npcAtacado);
+
+
+                                        
                     break;
-                default:
+                case "2":
+                    habilidadeCurar(jogador,npc,jogadorAtacado);
                     break;
 
             }
@@ -190,10 +178,30 @@ namespace Read_Project
                     read = Console.ReadKey().KeyChar;
                     Console.WriteLine();
                     break;
-                default:
+                case "2":
+                    habilidadeCurar(jogador,npc,jogadorAtacado);
                     break;
 
             }
+        }
+
+
+        public void habilidadeCurar(Personagem jogador, Inimigo npc, int jogadorAtacado){
+            Console.WriteLine("VOCÊ usou a HABILIDADE - LAMBER :P.(ENTER)");
+            char read = Console.ReadKey().KeyChar;
+            Console.WriteLine();
+            Console.WriteLine("Aperte ENTER 2 vezes para LAMBER seu pelo e se CURAR  do golpe do oponente.");
+            Console.WriteLine();
+
+            Console.WriteLine("Chlep.(ENTER)");
+            read = Console.ReadKey().KeyChar;
+            jogadorAtacado = jogadorAtacado + npc.dano / 2;
+            Console.WriteLine(jogadorAtacado);
+
+            Console.WriteLine("Chlep.(ENTER)");
+            read = Console.ReadKey().KeyChar;
+            jogadorAtacado = jogadorAtacado + npc.dano / 2;
+            Console.WriteLine(jogadorAtacado);
         }
 
 

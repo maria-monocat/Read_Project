@@ -19,7 +19,7 @@ namespace Read_Project
 
             jogador.inputClasseJogador(jogador);
             
-            missao.lutarContraRonRon(20,jogador);
+            missao.lutarContraRonRon(jogador);
         }
 
     }
